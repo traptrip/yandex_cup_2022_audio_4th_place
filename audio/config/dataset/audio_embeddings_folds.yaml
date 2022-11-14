@@ -1,0 +1,65 @@
+- name: AudioEmbDataset
+  kwargs:
+    data_dir: ${experience.data_dir}
+    csv_path: ${experience.data_dir}/../folds/train_meta_with_stages_fold0.tsv
+    crop_size: 81
+  sampler:
+    name: MPerClassSampler
+    kwargs:
+      batch_size: 128
+      samples_per_class: 4
+
+- name: AudioEmbDataset
+  kwargs:
+    data_dir: ${experience.data_dir}
+    csv_path: ${experience.data_dir}/../folds/train_meta_with_stages_fold1.tsv
+    crop_size: 81
+  sampler:
+    name: MPerClassSampler
+    kwargs:
+      batch_size: 128
+      samples_per_class: 4
+
+- name: AudioEmbDataset
+  kwargs:
+    data_dir: ${experience.data_dir}
+    csv_path: ${experience.data_dir}/../folds/train_meta_with_stages_fold2.tsv
+    crop_size: 81
+  sampler:
+    name: MPerClassSampler
+    kwargs:
+      batch_size: 128
+      samples_per_class: 4
+
+- name: AudioEmbDataset
+  kwargs:
+    data_dir: ${experience.data_dir}
+    csv_path: ${experience.data_dir}/../folds/train_meta_with_stages_fold3.tsv
+    crop_size: 81
+  sampler:
+    name: MPerClassSampler
+    kwargs:
+      batch_size: 128
+      samples_per_class: 4
+
+- name: AudioEmbDataset
+  kwargs:
+    data_dir: ${experience.data_dir}
+    csv_path: ${experience.data_dir}/../folds/train_meta_with_stages_fold4.tsv
+    crop_size: 81
+  sampler:
+    name: MPerClassSampler
+    kwargs:
+      batch_size: 128
+      samples_per_class: 4
+
+- name: AudioEmbDataset
+  kwargs:
+    data_dir: ${experience.data_dir}
+    csv_path: ${experience.data_dir}/../folds/train_meta_with_stages_fold5.tsv
+    crop_size: 81
+  sampler:
+    name: MPerClassSampler
+    kwargs:
+      batch_size: 128
+      samples_per_class: 4

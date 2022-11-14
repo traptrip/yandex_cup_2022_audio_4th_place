@@ -1,0 +1,29 @@
+defaults:
+  - _self_
+  - experience: default
+
+  - dataset: audio_embeddings
+
+  - loss: roadmap
+
+  - memory: default
+
+  - model: simclr
+
+  - optimizer: adamw
+
+  - loss_optimizer: adamw
+
+  - transform: img_transform
+
+  - override hydra/job_logging: colorlog
+
+  - override hydra/hydra_logging: colorlog
+
+hydra:
+  run:
+    dir: ${experience.log_dir}/${experience.experiment_name}/outputs
+
+  sweep:
+    dir: ${experience.log_dir}
+    subdir: ${experience.experiment_name}/outputs

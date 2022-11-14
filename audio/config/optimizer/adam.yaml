@@ -1,0 +1,7 @@
+- name: Adam
+  params:
+  kwargs:
+    lr: 0.0001
+  scheduler_on_epoch:
+  scheduler_on_step:
+  scheduler_on_val:

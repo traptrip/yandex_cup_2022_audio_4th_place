@@ -1,0 +1,7 @@
+- name: ArcFaceLoss
+  weight: 1.0
+  kwargs:
+    num_classes: ${experience.n_classes}
+    embedding_size: ${model.kwargs.embed_dim}
+    margin: 28.6
+    scale: 64

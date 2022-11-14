@@ -1,0 +1,4 @@
+- name: PairLoss
+  weight: 1.0
+  kwargs:
+    margin: 0.5

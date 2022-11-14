@@ -1,0 +1,5 @@
+- name: ProxyNCALoss
+  weight: 1.0
+  kwargs:
+    num_classes: ${experience.n_classes}
+    embedding_size: ${model.kwargs.embed_dim}

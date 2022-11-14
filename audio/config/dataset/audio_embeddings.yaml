@@ -1,0 +1,11 @@
+name: AudioEmbDataset
+kwargs:
+  data_dir: ${experience.data_dir}
+  csv_path: ${experience.data_dir}/../train_meta.tsv
+  crop_size: 81
+
+sampler:
+  name: MPerClassSampler
+  kwargs:
+    batch_size: 128
+    samples_per_class: 4
