@@ -5,9 +5,7 @@ import torchvision.models as models
 import timm
 
 import utils as lib
-from .cgd import CGDModel
 from .simCLR import BasicNet, BasicNetV2
-from .multiscale_resnet import MSResNet
 from .create_projection_head import create_projection_head
 
 
@@ -134,19 +132,9 @@ def get_backbone(name, pretrained=True):
         backbone.reset_classifier(-1)
         out_dim = 768
         pooling = nn.Identity()
-    elif name == "cgd":
-        out_dim = 2048
-        backbone = CGDModel(
-            "resnet50", gd_config="SG", feature_dim=1536, out_dim=out_dim
-        )
-        pooling = nn.Identity()
     elif name == "simCLR":
         out_dim = 512
         backbone = BasicNetV2(out_dim)
-        pooling = nn.Identity()
-    elif name == "ms_resnet":
-        out_dim = 768
-        backbone = MSResNet(512)
         pooling = nn.Identity()
     else:
         raise ValueError(f"{name} is not recognized")
