@@ -1,5 +1,9 @@
 # Yandex Cup 2022 4th solution training & inference repo
 
+## Prepare 
+- unpack dataset in ./data/audio
+- run ./audio/notebooks/eda.ipynb to get ./data/audio/train_meta_with_stages.csv
+
 ## Training
 - [config](./audio/config/default.yaml)
 - Run train single model: `cd audio && sh run_train.sh`
